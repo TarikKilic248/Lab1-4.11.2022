@@ -18,6 +18,12 @@ public:
     return a;
   }
 
+  nokta operator+(int c) {
+    this->x = x + c;
+    this->y = y + c;
+    return *this;
+  }
+
   void yaz() { cout << " " << y; }
 };
 
@@ -26,6 +32,8 @@ int main() {
   x = x + y;
   x.yaz();
   x = x + 8;
+  x.yaz();
+  
 
   return 0;
 }

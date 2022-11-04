@@ -6,7 +6,6 @@ public:
   int x, y;
 
   nokta();
-
   nokta(int a, int b) {
     x = a;
     y = b;
@@ -19,12 +18,19 @@ public:
     return a;
   }
 
+nokta operator+(int c){
+  this->x=x+c;
+  this->x=y+c;
+  
+}
+
   void yaz() { cout << " " << y; }
 };
 
 int main() {
-  nokta x(1, 5), y(1, 1);
+  nokta x(1, 5), y(8, 4);
   x = x + y;
+  x.yaz();
   x = x + 8;
 
   return 0;
